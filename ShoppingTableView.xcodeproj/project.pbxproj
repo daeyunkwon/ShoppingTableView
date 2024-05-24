@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		449B345D2C0008540010F093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B345C2C0008540010F093 /* AppDelegate.swift */; };
 		449B345F2C0008540010F093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B345E2C0008540010F093 /* SceneDelegate.swift */; };
-		449B34612C0008540010F093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34602C0008540010F093 /* ViewController.swift */; };
 		449B34642C0008540010F093 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 449B34632C0008540010F093 /* Base */; };
 		449B34662C0008550010F093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449B34652C0008550010F093 /* Assets.xcassets */; };
 		449B34692C0008550010F093 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 449B34682C0008550010F093 /* Base */; };
+		449B34712C0008AD0010F093 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34702C0008AD0010F093 /* MyTableViewController.swift */; };
+		449B34732C000A370010F093 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34722C000A370010F093 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		449B34592C0008540010F093 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		449B34592C0008540010F093 /* ShoppingTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449B345C2C0008540010F093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449B345E2C0008540010F093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		449B34602C0008540010F093 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		449B34632C0008540010F093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		449B34652C0008550010F093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449B34682C0008550010F093 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449B346A2C0008550010F093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449B34702C0008AD0010F093 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		449B34722C000A370010F093 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,7 @@
 		449B34502C0008540010F093 = {
 			isa = PBXGroup;
 			children = (
-				449B345B2C0008540010F093 /* test */,
+				449B345B2C0008540010F093 /* ShoppingTableView */,
 				449B345A2C0008540010F093 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +50,32 @@
 		449B345A2C0008540010F093 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				449B34592C0008540010F093 /* test.app */,
+				449B34592C0008540010F093 /* ShoppingTableView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		449B345B2C0008540010F093 /* test */ = {
+		449B345B2C0008540010F093 /* ShoppingTableView */ = {
 			isa = PBXGroup;
 			children = (
 				449B345C2C0008540010F093 /* AppDelegate.swift */,
 				449B345E2C0008540010F093 /* SceneDelegate.swift */,
-				449B34602C0008540010F093 /* ViewController.swift */,
 				449B34622C0008540010F093 /* Main.storyboard */,
 				449B34652C0008550010F093 /* Assets.xcassets */,
 				449B34672C0008550010F093 /* LaunchScreen.storyboard */,
 				449B346A2C0008550010F093 /* Info.plist */,
+				449B34722C000A370010F093 /* MyTableViewCell.swift */,
+				449B34702C0008AD0010F093 /* MyTableViewController.swift */,
 			);
-			path = test;
+			path = ShoppingTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		449B34582C0008540010F093 /* test */ = {
+		449B34582C0008540010F093 /* ShoppingTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 449B346D2C0008550010F093 /* Build configuration list for PBXNativeTarget "test" */;
+			buildConfigurationList = 449B346D2C0008550010F093 /* Build configuration list for PBXNativeTarget "ShoppingTableView" */;
 			buildPhases = (
 				449B34552C0008540010F093 /* Sources */,
 				449B34562C0008540010F093 /* Frameworks */,
@@ -82,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = test;
+			name = ShoppingTableView;
 			productName = test;
-			productReference = 449B34592C0008540010F093 /* test.app */;
+			productReference = 449B34592C0008540010F093 /* ShoppingTableView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 449B34542C0008540010F093 /* Build configuration list for PBXProject "test" */;
+			buildConfigurationList = 449B34542C0008540010F093 /* Build configuration list for PBXProject "ShoppingTableView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				449B34582C0008540010F093 /* test */,
+				449B34582C0008540010F093 /* ShoppingTableView */,
 			);
 		};
 /* End PBXProject section */
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449B34612C0008540010F093 /* ViewController.swift in Sources */,
 				449B345D2C0008540010F093 /* AppDelegate.swift in Sources */,
 				449B345F2C0008540010F093 /* SceneDelegate.swift in Sources */,
+				449B34732C000A370010F093 /* MyTableViewCell.swift in Sources */,
+				449B34712C0008AD0010F093 /* MyTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +298,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9M37U587ZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = test/Info.plist;
+				INFOPLIST_FILE = ShoppingTableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +312,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daeyunkwon.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,12 +331,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9M37U587ZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = test/Info.plist;
+				INFOPLIST_FILE = ShoppingTableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,16 +345,20 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.daeyunkwon.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		449B34542C0008540010F093 /* Build configuration list for PBXProject "test" */ = {
+		449B34542C0008540010F093 /* Build configuration list for PBXProject "ShoppingTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				449B346B2C0008550010F093 /* Debug */,
@@ -353,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		449B346D2C0008550010F093 /* Build configuration list for PBXNativeTarget "test" */ = {
+		449B346D2C0008550010F093 /* Build configuration list for PBXNativeTarget "ShoppingTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				449B346E2C0008550010F093 /* Debug */,

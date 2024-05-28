@@ -18,8 +18,8 @@ class MyTableViewCell: UITableViewCell {
         super.prepareForReuse()
         
         itemLabel.text = ""
-        checkButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
-        starButton.setImage(UIImage(systemName: "star"), for: .normal)
+        checkButton.setImage(nil, for: .normal)
+        starButton.setImage(nil, for: .normal)
     }
     
     override func awakeFromNib() {

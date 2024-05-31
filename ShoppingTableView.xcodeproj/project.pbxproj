@@ -14,6 +14,7 @@
 		449B34692C0008550010F093 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 449B34682C0008550010F093 /* Base */; };
 		449B34712C0008AD0010F093 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34702C0008AD0010F093 /* MyTableViewController.swift */; };
 		449B34732C000A370010F093 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34722C000A370010F093 /* MyTableViewCell.swift */; };
+		44DDCA5D2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		449B346A2C0008550010F093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449B34702C0008AD0010F093 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		449B34722C000A370010F093 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				449B346A2C0008550010F093 /* Info.plist */,
 				449B34722C000A370010F093 /* MyTableViewCell.swift */,
 				449B34702C0008AD0010F093 /* MyTableViewController.swift */,
+				44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */,
 			);
 			path = ShoppingTableView;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44DDCA5D2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift in Sources */,
 				449B345D2C0008540010F093 /* AppDelegate.swift in Sources */,
 				449B345F2C0008540010F093 /* SceneDelegate.swift in Sources */,
 				449B34732C000A370010F093 /* MyTableViewCell.swift in Sources */,

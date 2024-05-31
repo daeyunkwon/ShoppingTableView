@@ -15,21 +15,28 @@ struct Shopping {
 
 class MyTableViewController: UITableViewController {
     
+    //MARK: - Properties
+    
     @IBOutlet var headerBackView: UIView!
     @IBOutlet var headerSubBackView: UIView!
     @IBOutlet var headerTextField: UITextField!
     @IBOutlet var addButton: UIButton!
     
-    var array: [Shopping] = [
+    var shoppings: [Shopping] = [
         Shopping(item: "그립톡 구매하기", check: true, favorite: true),
         Shopping(item: "사이다 구매하기", check: false, favorite: false),
         Shopping(item: "아이패드 케이스 최저가 알아보기", check: false, favorite: true),
         Shopping(item: "양말", check: false, favorite: true),
     ]
     
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureUI()
+    }
+    
+    func configureUI() {
         navigationItem.title = "쇼핑"
         
         headerBackView.backgroundColor = .clear
@@ -47,37 +54,6 @@ class MyTableViewController: UITableViewController {
         addButton.layer.cornerRadius = 10
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return array.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyTableViewCell
-
-        cell.shopping = array[indexPath.row]
-        
-        cell.checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
-        cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
-        
-        cell.checkButton.tag = indexPath.row
-        cell.starButton.tag = indexPath.row
-        
-        cell.selectionStyle = .none
-        return cell
-    }
-    
     //MARK: - Functions
     
     func showTextFieldEmptyAlert() {
@@ -97,7 +73,7 @@ class MyTableViewController: UITableViewController {
         } else {
             let shopping = Shopping(item: item)
             
-            self.array.append(shopping)
+            self.shoppings.append(shopping)
             
             tableView.reloadData()
             
@@ -106,12 +82,43 @@ class MyTableViewController: UITableViewController {
     }
     
     @objc func checkButtonTapped(sender: UIButton) {
-        array[sender.tag].check.toggle()
+        shoppings[sender.tag].check.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
     @objc func starButtonTapped(sender: UIButton) {
-        array[sender.tag].favorite.toggle()
+        shoppings[sender.tag].favorite.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+    }
+}
+
+//MARK: - TableView
+
+extension MyTableViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return shoppings.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyTableViewCell
+
+        cell.shopping = shoppings[indexPath.row]
+        
+        cell.checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
+        cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
+        
+        cell.checkButton.tag = indexPath.row
+        cell.starButton.tag = indexPath.row
+        
+        cell.selectionStyle = .none
+        return cell
     }
 }

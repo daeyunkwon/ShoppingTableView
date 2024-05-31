@@ -66,27 +66,13 @@ class MyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! MyTableViewCell
 
-        let data = array[indexPath.row]
-        
-        cell.itemLabel.text = data.item
+        cell.shopping = array[indexPath.row]
         
         cell.checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
         cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
         
         cell.checkButton.tag = indexPath.row
         cell.starButton.tag = indexPath.row
-        
-        if data.check {
-            cell.checkButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
-        } else {
-            cell.checkButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
-        }
-        
-        if data.favorite {
-            cell.starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
-        } else {
-            cell.starButton.setImage(UIImage(systemName: "star"), for: .normal)
-        }
         
         cell.selectionStyle = .none
         return cell
@@ -128,7 +114,4 @@ class MyTableViewController: UITableViewController {
         array[sender.tag].favorite.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
-    
-
-
 }

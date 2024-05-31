@@ -14,6 +14,26 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet var checkButton: UIButton!
     @IBOutlet var starButton: UIButton!
     
+    var shopping: Shopping? {
+        didSet {
+            guard let shopping = self.shopping else {return}
+            
+            itemLabel.text = shopping.item
+            
+            if shopping.check {
+                checkButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            } else {
+                checkButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }
+            
+            if shopping.favorite {
+                starButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            } else {
+                starButton.setImage(UIImage(systemName: "star"), for: .normal)
+            }
+        }
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         

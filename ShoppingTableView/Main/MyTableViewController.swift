@@ -7,12 +7,6 @@
 
 import UIKit
 
-struct Shopping {
-    let item: String
-    var check: Bool = false
-    var favorite: Bool = false
-}
-
 class MyTableViewController: UITableViewController {
     
     //MARK: - Properties

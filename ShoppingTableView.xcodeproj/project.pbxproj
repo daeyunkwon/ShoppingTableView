@@ -15,6 +15,7 @@
 		449B34712C0008AD0010F093 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34702C0008AD0010F093 /* MyTableViewController.swift */; };
 		449B34732C000A370010F093 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449B34722C000A370010F093 /* MyTableViewCell.swift */; };
 		44DDCA5D2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */; };
+		44DDCA642C0AF71D00BE44A9 /* Sopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDCA632C0AF71D00BE44A9 /* Sopping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		449B34702C0008AD0010F093 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		449B34722C000A370010F093 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		44DDCA632C0AF71D00BE44A9 /* Sopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sopping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,58 @@
 		449B345B2C0008540010F093 /* ShoppingTableView */ = {
 			isa = PBXGroup;
 			children = (
+				44DDCA5F2C0AF69600BE44A9 /* Application */,
+				44DDCA5E2C0AF66900BE44A9 /* Utils */,
+				44DDCA622C0AF70E00BE44A9 /* Model */,
+				44DDCA602C0AF6A400BE44A9 /* Main */,
+				44DDCA612C0AF6B000BE44A9 /* Resources */,
+			);
+			path = ShoppingTableView;
+			sourceTree = "<group>";
+		};
+		44DDCA5E2C0AF66900BE44A9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		44DDCA5F2C0AF69600BE44A9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				449B345C2C0008540010F093 /* AppDelegate.swift */,
 				449B345E2C0008540010F093 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		44DDCA602C0AF6A400BE44A9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
 				449B34622C0008540010F093 /* Main.storyboard */,
+				449B34722C000A370010F093 /* MyTableViewCell.swift */,
+				449B34702C0008AD0010F093 /* MyTableViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		44DDCA612C0AF6B000BE44A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				449B34652C0008550010F093 /* Assets.xcassets */,
 				449B34672C0008550010F093 /* LaunchScreen.storyboard */,
 				449B346A2C0008550010F093 /* Info.plist */,
-				449B34722C000A370010F093 /* MyTableViewCell.swift */,
-				449B34702C0008AD0010F093 /* MyTableViewController.swift */,
-				44DDCA5C2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift */,
 			);
-			path = ShoppingTableView;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		44DDCA622C0AF70E00BE44A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44DDCA632C0AF71D00BE44A9 /* Sopping.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +189,7 @@
 			files = (
 				44DDCA5D2C09DCDA00BE44A9 /* ReuseIdentifierProtocol.swift in Sources */,
 				449B345D2C0008540010F093 /* AppDelegate.swift in Sources */,
+				44DDCA642C0AF71D00BE44A9 /* Sopping.swift in Sources */,
 				449B345F2C0008540010F093 /* SceneDelegate.swift in Sources */,
 				449B34732C000A370010F093 /* MyTableViewCell.swift in Sources */,
 				449B34712C0008AD0010F093 /* MyTableViewController.swift in Sources */,
@@ -302,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9M37U587ZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShoppingTableView/Info.plist;
+				INFOPLIST_FILE = ShoppingTableView/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9M37U587ZT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ShoppingTableView/Info.plist;
+				INFOPLIST_FILE = ShoppingTableView/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
